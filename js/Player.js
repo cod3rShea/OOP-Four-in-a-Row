@@ -4,7 +4,7 @@ class Player {
         this.playerID = playerID;
         this.playerColor = playerColor;
         this.active = active;
-        this.tokens = createTokens(21);
+        this.tokens = this.createTokens(21);
     }
 
     /**
