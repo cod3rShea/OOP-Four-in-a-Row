@@ -4,6 +4,22 @@ class Player {
         this.playerID = playerID;
         this.playerColor = playerColor;
         this.active = active;
-        this.token = [];
+        this.tokens = createTokens(21);
+    }
+
+    /**
+        * Creates Token Object for Player
+        * @param {integer} num - Number of token objects to be created. 
+     */
+
+    createTokens(num){
+        const tokens = [];
+
+        for(let i = 0; i < num.length; i++) {
+            let token = new Token(i, this);
+            tokens.push(token);
+        }
+
+        return tokens;
     }
 }
